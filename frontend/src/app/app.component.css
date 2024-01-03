@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-weight: 600;
+    background-color: rgb(233, 229, 229);
+}
+header {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+/* TYPE */
+  h1{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Lobster';
+    font-size: 3rem;
+    font-weight: 500;
+  }
+.login a{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.login a:hover{
+   text-decoration: underline;
+}
+
+.registerr {
+  background-color:salmon;
+  margin-top: 25px;
+  padding: 1.2em;
+  height: 10px;
+  border-radius: 10px;
+  width: 170px;    
+  margin-right: 20px;
+  float: right;
+}
+
+.registerr a{
+
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  padding: 20px;
+  position: relative;
+  top: -11px;
+}
+.registerr:hover{
+  background-color: rgba(248, 140, 129, 0.849);
+}
+
+.sidenav a {
+  text-decoration: none;
+  right: 0;
+  color:white;
+  display: block;
+  transition: 0.3s;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.sidenav a:hover {
+  color: red;
+}
+
+
+.container1{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.colll1{
+margin-left: 10px;
+ display: flex;
+ width: 20%;
+ min-width: 10%;
+ justify-content: space-between;
+}
+.colll2{
+ display: flex;
+
+ max-width: 60%;
+
+ 
+}
+.logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.logo a{
+    text-decoration: none;
+}
+.login{
+ padding: 10px;
+ padding-left: 0;
+ margin-top: 25px;
+ margin-right: 3rem;
+}
+span{
+ position: fixed;
+ right: 0;
+ top:20px;
+ width: 3%;
+ margin-left: 50px;
+ margin-right: 50px;
+ display: block;
+}
+.sidenav {
+
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 4;
+ right: 0;
+ top: 0;
+ background-color:rgb(36, 105, 107);
+ overflow-x: hidden;
+ transition: 0.5s;
+
+}
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 45px;
+ font-size: 56px;
+}
+@media screen and (max-width: 640px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .col1{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+.footer{  
+  background:gray;
+  padding: 5px;
+}
+
+.footer .footer-menu{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+max-width: 1000px;
+width:100%;
+display:flex;
+margin:0 auto 10px;
+justify-content: space-between;
+color:white;
+font-size: 20px ;
+}
+
+.footer .footer-menu.title{
+margin-bottom: 10px;
+}
+
+.footer .footer-menu ul li a{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+display: block;
+text-align:left;
+margin-bottom: 6px;
+text-decoration: none;
+color:white;
+font-size: 20px;
+}
+
+.footer .footer-menu ul li a:hover{
+  
+  color: black;
+}
+
+.footer .button {
+background-color: orange; 
+border: none;
+color: white;
+padding: 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 16px;
+margin: 1px 1px;
+cursor: pointer;
+}
+.footer .button {border-radius:12px;}
+
+.footer .round{
+border-radius: 25px;
+border: 2px solid orange;
+padding: 20px; 
+width: 210px;
+height: 10px;  
+}
+
+.footer .terms{
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-align: center;
+color: white;
+}
+@media screen and (max-width: 640px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .colll1{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .firstt{
+    flex-direction: column;
+  }
+  /*.sub-first{
+    width:80%;
+  }*/
+  
+
+}
+@media screen and (max-width: 940px)
+{
+  .sub-first-2{
+    display: none;
+  }
+}
+
+

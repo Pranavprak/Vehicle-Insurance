@@ -1,0 +1,53 @@
+
+
+.container {
+    width: 70%;
+    margin: 50px;
+    margin-left: 100px;
+    margin-top: 0px;
+}
+
+table {
+ 
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 1.6rem;
+    height: 600px;
+    width: 90%;
+}
+
+table.inner {
+    border: 0px
+}
+
+select {
+    width: 47%;
+    font-size: 1.5rem;
+    background-color: whitesmoke;
+}
+
+input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+button {
+    background-color: salmon;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    margin: 20px;
+    font-family: Raleway;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    bottom: 20%
+}
+
+button:hover {
+    opacity: 0.8;
+}

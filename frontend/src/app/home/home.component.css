@@ -1,0 +1,197 @@
+
+/* TYPE */
+  
+
+.register {
+    background-color:salmon;
+    margin-top: 25px;
+    padding: 1.2em;
+    height: 10px;
+    border-radius: 10px;
+    width: 170px;    
+    margin-right: 20px;
+    float: right;
+}
+
+.register a{
+
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px;
+    position: relative;
+    top: -11px;
+}
+.register:hover{
+    background-color: rgba(248, 140, 129, 0.849);
+}
+
+  
+  .desc {
+    font-weight: 700;
+    font-size: 2.2rem;
+    width: 80%;
+    margin: 50px 0px;
+
+}
+.desc1{
+   font-size: 1.5rem;
+  
+}
+.second-article h2{
+  font-size: 3.3rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 0 40px 20px;
+}
+.second-article p{
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: lighter;
+   font-size: 1.6rem;
+
+}
+
+  /* LAYOUT */
+  .container{
+     width: 90%;
+     display: flex;
+     justify-content: space-between;
+ 
+ }
+ 
+ .col1{
+   margin-left: 10px;
+    display: flex;
+    width: 25%;
+    min-width: 10%;
+    justify-content: space-between;
+  }
+  .col2{
+    display: flex;
+
+    max-width: 60%;
+  
+    
+  }
+
+
+ .first-article{
+   margin-top: 100px;
+   height: 600px;
+   display: block;
+   overflow: hidden;
+ }
+ .firstt{
+   display: flex;
+   justify-content: space-evenly;
+ }
+ .sub-first-2{
+   margin: 50px 0px;
+ }
+
+
+ .smartphone {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 68px;
+  z-index: 1;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 350px;
+  height: 550px;
+  background-image: url(../../assets/images/smart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center;
+
+} 
+.second-article{
+ 
+  height: 700px;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+}
+
+.second-article-text{
+  text-align: center;
+  margin-top: 70px;
+}
+.second-article .images{
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+.second-article .image1{
+  width: 30%;
+}
+.second-article .image2{
+  width: 30%;
+}
+.second-article .image3{
+  width: 30%;
+  clear: right;
+}
+.second-article .register{
+  display: block;
+  margin: 0 auto;
+  float: none;
+}
+
+@media screen and (max-width: 640px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .col1{
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .firstt{
+    flex-direction: column;
+  }
+  /*.sub-first{
+    width:80%;
+  }*/
+  
+
+}
+@media screen and (max-width: 940px)
+{
+  .sub-first-2{
+    display: none;
+  }
+}
+
+

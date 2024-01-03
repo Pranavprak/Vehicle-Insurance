@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Hello,{{customer.customer_Name}}</h1>
+    <div class="container">
+        <div class="tab">
+            <table align="center" cellpadding="10">
+
+                <!----- First Name ---------------------------------------------------------->
+                <tr>
+                    <td>Username</td>
+                    <td>: {{customer.customer_Name}}
+                    </td>
+                </tr>
+
+
+                <!----- Date Of Birth -------------------------------------------------------->
+                <tr>
+                    <td>DATE OF BIRTH</td>
+
+                    <td>:{{customer.dob |date}}
+                    </td>
+                </tr>
+
+                <!----- Email Id ---------------------------------------------------------->
+                <tr>
+                    <td>EMAIL ID</td>
+                    <td>: {{customer.email}}
+                </tr>
+
+                <!----- Mobile Number ---------------------------------------------------------->
+                <tr>
+                    <td>MOBILE NUMBER</td>
+                    <td>
+                        : {{customer.contact_No}}
+                    </td>
+                </tr>
+
+                <!----- Gender ----------------------------------------------------------->
+                <tr>
+                    <td>GENDER</td>
+                    <td>
+                        : {{customer.gender}}
+                    </td>
+                </tr>
+
+
+
+                <!----- AAdhar card ---------------------------------------------------------->
+                <tr>
+                    <td>Aadhar No.</td>
+                    <td>: <input type="text" name="Aadhar" [(ngModel)]="user.aadhar_no"/></td>
+                </tr>
+
+                <!----- PAN ---------------------------------------------------------->
+                <tr>
+                    <td>PAN Card</td>
+                    <td>: <input type="text" name="Pan" maxlength="30" [(ngModel)]="user.pan_no"/>
+                    </td>
+                </tr>
+
+                <!----Vehicle ---------------------------------------------------------->
+                <tr>
+                    <td>Vehicle Type</td>
+                    <td>: <select id="Vehicle_type" name="Vehicle_type" [(ngModel)]="user.plan_id">
+                            <option value="-1">Vehicle Type</option>
+                            <option value="1">Two Wheeler</option>
+                            <option value="2">Three Wheeler</option>
+                            <option value="3">Four Vehicle</option>
+                        </select>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Plan Amount</td>
+                    <td *ngIf="user.plan_id==1">: Rs.1500
+                    <td *ngIf="user.plan_id==2">: Rs.5000
+                    <td *ngIf="user.plan_id==3">: Rs.8000   
+                    </td>
+                </tr>
+
+                
+                <tr>
+                    <td>Plan Duration</td>
+                    <td *ngIf="user">: 40 days  
+                    </td>
+                </tr>
+
+                <!----- Vehicle Model ---------------------------------------------------------->
+                <tr>
+                    <td>Vehicle Model</td>
+                    <td>: <input type="text" name="model" maxlength="30" [(ngModel)]="user.vehicle_model"/>
+                    </td>
+                </tr>
+
+                <!----- Plate no ---------------------------------------------------------->
+                <tr>
+                    <td>Plate No.</td>
+                    <td>: <input type="text" name="plate" [(ngModel)]="user.plate_no"/></td>
+                </tr>
+                <!----- Engine no ---------------------------------------------------------->
+                <tr>
+                    <td>Engine No.</td>
+                    <td>: <input type="text" name="Pan" maxlength="30" [(ngModel)]="user.engine_no"/>
+                    </td>
+                </tr>
+                <!----- Chassis ---------------------------------------------------------->
+                <tr>
+                    <td>Chassis No.</td>
+                    <td>: <input type="text" name="Pan" maxlength="30" [(ngModel)]="user.chassis_no"/>
+                    </td>
+                </tr>
+
+
+            </table>
+            <button type="button" id="submit" (click)="postuser()">Submit</button>
+            
+        </div>
+        </div>
+
+        
+</body>
+
+</html>

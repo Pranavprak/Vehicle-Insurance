@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid" style="width: 90%;">
+    <table class="table" style="border: 1px solid black;">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Policy No.</th>
+          <th scope="col">Username</th>
+          <th scope="col">Plan Type</th>
+          <th scope="col">Claim Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="response && response1">
+        <tr *ngFor="let status of response;let i=index">
+
+
+          <td *ngIf="status.claim_status != 'Not Claimed'" style="border: 1px solid black;">{{status.policy}}</td>
+            <td *ngIf="status.claim_status != 'Not Claimed'" style="border: 1px solid black;">{{response2[i].customer_Name}}</td>
+          <td style="border: 1px solid black;" *ngIf="response1[i].plan_id==1 && status.claim_status != 'Not Claimed'">Two Wheeler</td>
+          <td style="border: 1px solid black;" *ngIf="response1[i].plan_id==2 && status.claim_status != 'Not Claimed'">Three Wheeler</td>
+          <td style="border: 1px solid black;" *ngIf="response1[i].plan_id==3 && status.claim_status != 'Not Claimed'">Four Wheeler</td>
+          <td *ngIf="status.claim_status != 'Not Claimed'" style="border: 1px solid black;"><select  name="claim" [(ngModel)]="status.claim_status">
+              <option value="Claimed">Claimed</option>
+              <option value="Approved">Approved</option>
+              <option value="Rejected">Rejected</option>
+            </select>
+
+          </td>
+          <td *ngIf="status.claim_status != 'Not Claimed'" style="border: 1px solid black;"><button type="button" (click)="update(status)" class="btn"
+              style="background-color: salmon; color:white; ">Update</button></td>
+         
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+</body>
+
+</html>

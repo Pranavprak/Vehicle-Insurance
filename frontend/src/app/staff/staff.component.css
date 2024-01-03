@@ -1,0 +1,24 @@
+body{
+  background-color: rgb(233, 229, 229);
+}
+.container1{
+   padding-top: 150px;
+   display: flex;
+   margin-left: 60px;
+}
+.column1{
+    margin: 25px;
+    margin-top: 0px;
+    
+
+   
+}
+.column1 a{
+    text-decoration: none;
+    background-color:salmon;
+    padding:15px 30px;
+  border-radius: 10px;
+  font-size: 1.3em;
+
+  color: white;
+}

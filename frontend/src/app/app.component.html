@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Website Homepage</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <div class="container1">
+                <div class=colll1>
+                    <div class="logo" id="logo">
+                        <a routerLink="home" (click)="backchanges()" id="home"> <img src="../../assets/images/logo2.jpg" alt="Pranav" style="width:80%" ></a>
+                    </div>
+                    
+                    
+                    <!--<div class="login" id="login">
+                        <a routerLink="login" (click)="changes()">LOGIN</a>
+                    </div>-->
+                    <div class="registerr" id="login">
+                        <a routerLink="login" (click)="changes()">Login</a>
+                      </div>
+                      <div class="registerr" id="logout" style="display: none;">
+                        <a routerLink="home" (click)="backchangesl()">Logout</a>
+                      </div>
+                </div>
+                                    <div class="title" id="title">
+                                        <h1>Vehicle Insurance</h1>
+                                    </div>
+    
+                <div class=colll2 id="col2">
+                    <span style="font-size:30px;cursor:pointer" (click)="openNav()"><i class="fa fa-bars"
+                            style="font-size:36px"></i></span>
+    
+                    <div class="registerr" id="register">
+                      <a routerLink="register" (click)="changes()">Register Here</a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+                <a routerLink="about" (click)="changesside()">About us</a>
+                <a routerLink="login"  (click)="changesside()">Contact Us</a>
+                <a routerLink="plans"  (click)="changesside()">Motor Insurance</a>
+            </div>
+    
+        </header>
+   <!--       <app-staff></app-staff>   -->    
+      <router-outlet></router-outlet>    
+        
+    <div class="footer" id="footer1">
+        <div class="footer-menu">
+            <div class="col-1">
+                <br>
+                <div class="title">RESOURCES</div>
+                <br>
+                <ul style="list-style-type:none;">
+                    <li><a routerLink="login" (click)="changes()">Login</a></li><br>
+                    <li><a routerLink="register" (click)="changes()">Start an Application</a></li><br>
+                </ul>
+            </div>
+            <div class="col-2">
+                <br>
+                <div class="title">COMPANY</div><br>
+                <ul style="list-style-type:none;">
+                    <li><a routerLink="about" (click)="changesside()">About Us</a></li><br>
+                    <li><a routerLink="login" (click)="changes()">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <br>
+                <div class="title">PLANS</div><br>
+                <ul style="list-style-type:none;">
+                    <li> <a routerLink="plans">Plan1</a></li><br>
+                    <li><a routerLink="plans">Plan2</a></li><br>
+                    <li><a routerLink="plans">Plan3</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <br>
+                <div class="title">QUERIES</div>
+                <br>
+                <input class="round" type="email" placeholder="Enter E-mail address" size="20" required>
+                <br><br>
+                <a routerLink="login" (click)="changes()" class="button">
+                    <input type="submit" class="button" value="Submit now!!!">
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="terms">
+            <p>Terms | Licenses | Privacy | Accessibility<br>Term policies are issued in all other states and
+                contries<br>PDNC INSURANCE.INC.All rights reserved<br>
+        </div>
+        <br>
+    </div>
+    </body>
+    </html>

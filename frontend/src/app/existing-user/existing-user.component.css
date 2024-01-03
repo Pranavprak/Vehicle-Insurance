@@ -1,0 +1,65 @@
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    padding-top: 200px;
+}
+
+.head {
+    padding-top: 130px;
+    font-size: 1.6rem;
+    margin-left: 70px;
+}
+
+.buttons {
+    width: 60%;
+  display: flex;
+}
+.box{
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.container {
+    width: 70%;
+    margin: 50px;
+    margin-left: 100px;
+}
+
+table {
+    margin: 30px;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 1.6rem;
+    height: 600px;
+    width: 90%;
+}
+
+table.inner {
+    border: 0px
+}
+
+select {
+    width: 47%;
+    font-size: 1.5rem;
+    background-color: whitesmoke;
+}
+
+button {
+    background-color: salmon;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    margin: 20px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid" style="width: 90%;">
+        <table class="table" style="border: 1px solid black;">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Policy No.</th>
+                <th scope="col">Username</th>
+                <th scope="col">Plan Type</th>
+                <th scope="col">Queries</th>
+                <th scope="col">Callback Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="response && response1">
+              <tr *ngFor="let status of response">
+      
+      
+                <td *ngIf="status.callback_status != 'Not Requested'" style="border: 1px solid black;">{{status.policy}}</td>
+                  <td *ngIf="status.callback_status != 'Not Requested'" style="border: 1px solid black;">{{response2[status.policy-1].customer_Name}}</td>
+                <td style="border: 1px solid black;" *ngIf="response1[status.policy-1].plan_id==1 && status.callback_status != 'Not Requested'">Two Wheeler</td>
+                <td style="border: 1px solid black;" *ngIf="response1[status.policy-1].plan_id==2 && status.callback_status != 'Not Requested'">Three Wheeler</td>
+                <td style="border: 1px solid black;" *ngIf="response1[status.policy-1].plan_id==3 && status.callback_status != 'Not Requested'">Four Wheeler</td>
+                <td *ngIf="status.callback_status != 'Not Requested'" style="border: 1px solid black;">{{status.queries}}</td>
+                <td *ngIf="status.callback_status != 'Not Requested'" style="border: 1px solid black;"><select id="requested" name="requsted" [(ngModel)]="status.callback_status">
+                    
+                  <option value="Requested">Requested</option>
+                    <option value="Called Back">Called Back</option>
+                    </select>
+                </td>
+                <td *ngIf="status.callback_status != 'Not Requested'" style="border: 1px solid black;"><button type="button" (click)="update(status)" class="btn" style="background-color: salmon; color:white;">Update</button></td>
+              </tr>
+       
+            </tbody>
+          </table>
+        </div>
+</body>
+</html>

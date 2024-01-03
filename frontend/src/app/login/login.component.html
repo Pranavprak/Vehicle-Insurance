@@ -1,0 +1,39 @@
+<body>
+<div class="fix">
+    <div class="welcome">
+        <span class="text1">Welcome Back!</span>
+    </div>
+    <div class="enter">
+        <span class="text2">Enter your email to log into your account</span>
+    </div>
+    <div class="dont">
+        <span class="text3">Don't have an account?</span>
+        <a routerLink="../register">Start your registration</a>
+
+    </div>
+    <div class="textbox">
+        <div>
+            <span class="text4">Email</span>
+        </div>
+      
+        <input type="text" placeholder="email-id" [(ngModel)]="register.email">
+        <div>
+            <span class="text4">Password</span>
+        </div>
+
+        <div class="text">
+
+            <input type="password" placeholder="Password" [(ngModel)]="register.password">
+        </div>
+    </div>
+    <div class="subm">
+        <input type="button" (click)="login()" value="LOG-IN">
+    </div>
+
+
+
+    <div class="fo">
+        <a routerLink="../forget">Forget Password</a>
+    </div>
+</div>
+</body>

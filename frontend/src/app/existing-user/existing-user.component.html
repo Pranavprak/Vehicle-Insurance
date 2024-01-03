@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="flex1">
+        <div class="head">
+            <h1>Welcome {{customer.customer_Name}}!</h1>
+        </div>
+        <div class="buttons">
+           <!-- <div class="box">
+                <button *ngIf="isCollapsed" (click)="toggleCollapse()">Renew</button>
+               <button *ngIf="!isCollapsed" (click)="toggleCollapse()">Close</button>
+                <div *ngIf="!isCollapsed" class="inner">
+                    <h5>Your Policy ends in 7th June</h5>
+                </div>
+            </div>-->
+            <div class="box">
+                <button *ngIf="isPressed" (click)="CtoggleCollapse()">Claim</button>
+                <button *ngIf="!isPressed" (click)="CtoggleCollapse()">Close</button>
+                <div *ngIf="!isPressed" class="inner">
+                    <h3>You have Claimed,wait for approval</h3>
+                </div>
+            </div>
+            <div class="box">
+                <button *ngIf="isClicked" (click)="TtoggleCollapse()">Track Status</button>
+                <button *ngIf="!isClicked" (click)="TtoggleCollapse()">Close</button>
+                <div *ngIf="!isClicked" class="inner">
+                    <h3>Policy Status :{{response2.policy_status}}</h3><br>
+                    <h3>Claim Status :{{response2.claim_status}}</h3><br>
+                    <h3>Callback Status :{{response2.callback_status}}</h3><br>
+                </div>
+            </div>
+            <div class="box">
+                <button *ngIf="isCalled" (click)="RtoggleCollapse()">Request CallBack</button>
+                <button *ngIf="!isCalled" (click)="RtoggleCollapse()">Close</button>
+                <div *ngIf="!isCalled" class="inner">
+                    <h3>You have Requested a CallBack</h3>
+                    <input type="test" placeholder="Write your queries" [(ngModel)]="queries">
+                    <button (click)="submit()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+
+    </div>
+    <div class="container">
+        <div class="tab">
+            <table align="center" cellpadding="10">
+
+                <!----- First Name ---------------------------------------------------------->
+                <tr>
+                    <td>Username</td>
+                    <td>: {{customer.customer_Name}}
+                    </td>
+                </tr>
+
+
+                <!----- Date Of Birth -------------------------------------------------------->
+                <tr>
+                    <td>DATE OF BIRTH</td>
+
+                    <td>:{{customer.dob | date}}
+                    </td>
+                </tr>
+
+                <!----- Email Id ---------------------------------------------------------->
+                <tr>
+                    <td>EMAIL ID</td>
+                    <td>: {{customer.email}}
+                </tr>
+
+                <!----- Mobile Number ---------------------------------------------------------->
+                <tr>
+                    <td>MOBILE NUMBER</td>
+                    <td>
+                        : {{customer.contact_No}}
+                    </td>
+                </tr>
+
+                <!----- Gender ----------------------------------------------------------->
+                <tr>
+                    <td>GENDER</td>
+                    <td>
+                        : {{customer.gender}}
+                    </td>
+                </tr>
+
+
+
+                <!----- AAdhar card ---------------------------------------------------------->
+               <!-- <tr>
+                    <td>Aadhar No.</td>
+                    <td>:{{user.aadhar_no}}
+                        <input type="text" name="Aadhar" /></td>
+                </tr>-->
+
+                <!----- PAN ---------------------------------------------------------->
+                <!--<tr>
+                    <td>PAN Card</td>
+                    <td>: {{user.pan_no}}
+                        <input type="text" name="Pan" maxlength="30" />
+                    </td>
+                </tr>
+-->
+                <!----Vehicle ---------------------------------------------------------->
+                <tr>
+                    <td>Plan Type</td>
+                    <td *ngIf="user.plan_id==1">: Two Wheeler
+                        <td *ngIf="user.plan_id==2">: Three Wheeler
+                            <td *ngIf="user.plan_id==3">: Four Wheeler   
+                            
+                        <!-- <select id="Vehicle_type" name="Vehicle_type">
+                            <option value="-1">Vehicle Type</option>
+                            <option value="Car">Car</option>
+                            <option value="Two Wheeler">Two Wheeler</option>
+                            <option value="Large">Large Vehicle</option>
+                        </select>-->
+
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Plan Amount</td>
+                    <td *ngIf="user.plan_id==1">:{{ 1500| currency:"INR"}}
+                    <td *ngIf="user.plan_id==2">: {{ 5000| currency:"INR"}}
+                    <td *ngIf="user.plan_id==3">: {{ 8000| currency:"INR"}}   
+                    </td>
+                </tr>
+
+                
+                <tr>
+                    <td>Plan Duration</td>
+                    <td *ngIf="user">: 40 days  
+                    </td>
+                </tr>
+
+                <!----- Vehicle Model ---------------------------------------------------------->
+                <tr>
+                    <td>Vehicle Model</td>
+                    <td>: {{user.vehicle_model}}
+                        <!--<input type="text" name="model" maxlength="30" />-->
+                    </td>
+                </tr>
+
+                <!----- Plate no ---------------------------------------------------------->
+                <tr>
+                    <td>Plate No.</td>
+                    <td>: {{user.plate_no}}
+                        <!--<input type="text" name="plate" /></td>-->
+                </tr>
+                <!----- Engine no ---------------------------------------------------------->
+                <tr>
+                    <td>Engine No.</td>
+                    <td>: {{user.engine_no}}
+                        <!--<input type="text" name="Pan" maxlength="30" />-->
+                    </td>
+                </tr>
+                <!----- Chassis ---------------------------------------------------------->
+                <tr>
+                    <td>Chassis No.</td>
+                    <td>: {{user.chassis_no}}
+                        <!--<input type="text" name="Pan" maxlength="30" />-->
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+                <!--<tr>
+                    <td>Plan</td>
+                    <td>: From Database</td>
+                </tr>-->
+                <tr>
+                    <td>Starting Date</td>
+                    <td>: {{user.start_date}}</td>
+                </tr>
+               <!-- <tr>
+                   <td>Expiry Date
+                    <td>: {{user.end_date}}</td>
+                </tr>-->
+
+
+
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<body>
+    <div class="container">
+        <div class="header1">
+            <h2>Register Here</h2>
+        </div>
+        <form id="form" class="form">
+            <div class="form-control">
+                <input type="text" placeholder="Username" [(ngModel)]="register.customer_Name" name="username" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+
+                <input type="email" 
+                placeholder="Email:abc@gmail.com"  id="email" [(ngModel)]="register.email" name="email" />
+            </div>
+            <div class="form-control">
+
+                <input type="password" placeholder="Password" id="password" [(ngModel)]="register.password" name="password" />
+            </div> 
+            <div class="form-control">
+
+                <input type="text" placeholder="Contact" id="contact" [(ngModel)]="register.contact_No" name="mobile" />
+            
+            </div>
+            <div class="form-control">
+
+                <input type="text" placeholder="Address" id="address" [(ngModel)]="register.address" name="address" />
+            
+            </div>
+            <div class="form-control">
+
+                <input type="text" placeholder="state" id="state" [(ngModel)]="register.state" name="state" />
+                
+            </div>
+            <div class="form-control">
+
+                <input type="text" placeholder="city" id="city" [(ngModel)]="register.city" name="city" />
+            </div>
+            <div class="form-control">
+
+                <input type="text" placeholder="pincode" id="pincode" [(ngModel)]="register.pincode" name="pincode" />
+            
+            </div>
+            <div class="form-control">
+                <input type="date" placeholder="DOB" [(ngModel)]="register.dob" name="dob" />
+                
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input type="radio"  [(ngModel)]="register.gender" value="Male" name="gender" />Male
+                <input type="radio" [(ngModel)]="register.gender" value="Female" name="gender" />Female
+                <input type="radio"  [(ngModel)]="register.gender" value="Others" name="gender" />Others
+            </div>
+
+            
+            <div class="form-control">
+                <label for="security">Choose a security question</label>
+                <select class="security" id="security" [(ngModel)]="register.security_Question" name="security">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="sports">What is your favourite sport?</option>
+                    <option value="animal">What is your favourite animal?</option>
+
+                    <option value="dish">What is your favourite dish?</option>
+                    <option value="place">What is your favourite place?</option>
+                </select>
+            </div>
+            <div class="form-control">
+
+                <input type="text" placeholder="Answer" id="answer" [(ngModel)]="register.security_Answer" name="answer" />
+            </div>
+            <button type="submit" (click)="postregister()">Submit</button>
+        </form>
+        <br>
+    </div>
+    <script src="register.js"></script>
+</body>
